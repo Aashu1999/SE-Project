@@ -20,8 +20,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js",
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js",
+    "deploy": "pm2 start --name 'backend' index.js"
   },
   "keywords": [],
   "author": "",
