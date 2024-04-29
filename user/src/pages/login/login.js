@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import libraryImage from '../../assets/library-image.png';
-import axios from 'axios';
+import axios from '../../axios/axios';
 import "./login.css"
+
 
 import PopUp from '../../Components/Popups/Popup';
 import Loader from '../../Components/Loader/Loader';
@@ -19,7 +20,7 @@ const LoginPage = () => {
         console.log(email, password);
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:3002/auth/user-login', { email, password });
+            const response = await axios.post('auth/user-login', { email, password });
             console.log(response);
             // Save user ID in local storage
             localStorage.setItem('userId', response.data.user._id);
