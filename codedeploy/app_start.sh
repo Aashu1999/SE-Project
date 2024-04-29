@@ -4,8 +4,8 @@
 pm2 stop all
 
 # run backend
-cd /home/ubuntu/se-project/backend/ && npm run deploy
+cd /home/ubuntu/se-project/backend/ && sudo npm run deploy
 # run library
-cd /home/ubuntu/se-project/library/ && npm run deploy
+cd /home/ubuntu/se-project/library/ && sudo npm run deploy
 # run user
-cd /home/ubuntu/se-project/user/ && npm run deploy
+cd /home/ubuntu/se-project/user/ && sudo npm run deploy
